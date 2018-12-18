@@ -43,6 +43,12 @@ Evolution of libcds (Gource visualization by Landon Wilkins): https://www.youtub
 **How to build**
    - *nix: [use CMake](build/cmake/readme.md)
    - Windows: use MS Visual C++ 2017 project
+   
+**windows 编译步骤**
+   - 使用cmake生成，两个enable_test可以不选
+   - 在cds属性表里  C++ -> 预处理器 加上 CDS_BUILD_LIB
+   - 在cds-s属性表里 C++ -> 预处理器 加上  CDS_BUILD_STATIC_LIB
+   - 生成，不报错，ok!
 
 Some parts of libcds may depend on DCAS (double-width compare-and-swap) atomic primitive if
 the target architecture supports it. For x86, cmake build script enables `-mcx16` compiler flag that
